@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'bootstrap5',
     'accounts.apps.AccountsConfig',
     'technologies.apps.TechnologiesConfig',
-    'core'
+    'core',
     'cloudinary',
 ]
 
