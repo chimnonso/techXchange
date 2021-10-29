@@ -1,0 +1,123 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<section class="container-fluid hero d-flex flex-column justify-content-center align-items-center">
+    <!-- <div class="row">
+        <div class="col"> -->
+            <!-- <div class="banner"> -->
+                <h1>Welcome to TechXchange</h1>
+                <p>We bring you closer to your technological solution</p>
+                <a href="" class="btn btn-outline-primary call-2-action">Get Started</a>
+            <!-- </div> -->
+        <!-- </div>
+    </div> -->
+</section>
+
+<section class="container about mt-5 pt-5">
+    <div class="row gx-sm-5">
+        <div class="col-md-6">
+            <div class="card" style="height: 100%;">
+                <img src="/static/img/hero1.jpg" class="img-card-top" style="height: inherit;" alt="">
+            </div>
+        </div>
+        <div class="col-md-6 py-5">
+            <h2 class="header-text">About Us</h2>
+            <h3>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusantium amet, minima eos aliquam tempore corrupti?</h3>
+            <div class="d-sm-flex pt-3 text-center text-sm-start">
+                <span><i class="fab fa-app-store fa-5x"></i></i></span>
+                <div class="ps-sm-4">
+                    <h5 class="text-capitalize">Human resource</h5>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum doloremque quidem eaque dignissimos numquam nobis esse id pariatur, aliquam mollitia.</p>
+                    <!-- <hr> -->
+                </div>
+            </div>
+            <div class="d-sm-flex pt-3">
+                <span><i class="fab fa-app-store fa-5x"></i></i></span>
+                <div class="ps-sm-4">
+                    <h5 class="text-capitalize">Technology exchange</h5>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum doloremque quidem eaque dignissimos numquam nobis esse id pariatur, aliquam mollitia.</p>
+                    <!-- <hr> -->
+                </div>
+            </div>
+            <div class="d-sm-flex pt-3 text-center text-sm-start">
+                <span><i class="fab fa-app-store fa-5x"></i></i></span>
+                <div class="ps-sm-4">
+                    <h5 class="text-capitalize">technical support</h5>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum doloremque quidem eaque dignissimos numquam nobis esse id pariatur, aliquam mollitia.</p>
+                    <!-- <hr> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="container mt-5 pt-sm-5">
+    <div class="row text-center mb-5" id="tech">
+        <div class="col">
+            <h2 class="header-text">Technologies</h2>
+            <h3>Explore our awesome <span>technologies</span></h3>
+            <p>Trust us with your technological needs because, with us you can never go wrong</p>
+        </div>
+    </div>
+    <div class="row"><a href="{% url 'technology:technologies' %}" class="text-end pb-2">View More&raquo;</a></div>
+    <div class="row row-cols-1 row-cols-sm-3 row-cols-md-4 gx-0 gy-3">
+        
+        {% for tech in techs %}
+            <div class="col">
+                
+                
+                {% include 'partials/_technologies.html' %}
+            </div>
+        {% endfor %}
+    </div>
+</section>
+
+<section class="container-fluid mt-5 pt-sm-5 customers bg-secondary">
+    <div class="row text-center mb-5" id="customers">
+        <div class="col">
+            <h2 class="header-text">happy customers</h2>
+            <h3>See what our clients are <span>saying</span></h3>
+            <p>Trust us with your technological needs because, with us you can never go wrong</p>
+        </div>
+    </div>
+    <div class="row text-center">
+        <div class="row">
+            <div class="col">
+                <div class="">
+                    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                          </div>
+                        <div class="carousel-inner">
+                          <div class="carousel-item active">
+                            <img src="/static/img/testimonials-1.jpg" class="img-fluid rounded-circle" alt="...">
+                            <br><br> <br><br><br><br>
+                            <div class="carousel-caption d-none d-md-block pt-5">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod iure praesentium voluptatibus unde similique aliquid vero numquam voluptas impedit magni aliquam nulla iste nisi debitis repellat dolore, accusamus sit dicta.</p>
+                            </div>
+                          </div>
+                          <div class="carousel-item">
+                            <img src="/static/img/testimonials-2.jpg" class="img-fluid rounded-circle" alt="...">
+                            <br><br> <br><br><br><br>
+                            <div class="carousel-caption d-none d-md-block pt-5">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod iure praesentium voluptatibus unde similique aliquid vero numquam voluptas impedit magni aliquam nulla iste nisi debitis repellat dolore, accusamus sit dicta.</p>
+                            </div>
+                          </div>
+                          <div class="carousel-item">
+                            <img src="/static/img/testimonials-3.jpg" class="img-fluid rounded-circle" alt="...">
+                            <br><br> <br><br><br><br>
+                            <div class="carousel-caption d-none d-md-block pt-5">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod iure praesentium voluptatibus unde similique aliquid vero numquam voluptas impedit magni aliquam nulla iste nisi debitis repellat dolore, accusamus sit dicta.</p>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

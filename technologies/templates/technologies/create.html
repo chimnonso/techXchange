@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load bootstrap5 %}
+{% block content %}
+<div class="mt-5">
+    <div class="container-fluid d-flex justify-content-center">
+        <div class="col-6">
+    
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title text-center mb-5">Add Technology</h4>
+                    <form method="post" enctype="multipart/form-data" class="form">
+                        {% csrf_token %}
+                        {% bootstrap_form_errors form %}           
+                        {% for field in form %}
+                            {% bootstrap_field field placeholder='' %}
+                        {% endfor %}
+                        {% buttons %}
+                            <div class="d-grid gap-2">
+                                <button type="submit" class="btn btn-primary">Create</button>
+                            </div>
+                        {% endbuttons %}
+                    </form>
+                </div>
+            </div>
+    
+            
+        </div>
+    </div>
+</div>
+{% endblock %}

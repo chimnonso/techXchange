@@ -1,0 +1,24 @@
+{% load static %}
+
+<div class="card with-overlay">
+  <img src="{{ tech.main_photo.url}}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title text-center">{{ tech.name | title }}</h5>
+    <div class="d-flex justify-content-between">
+      <!-- <span class=""><i class="fas fa-user"></i> {{ tech.posted_by | title}}</span> -->
+      <span><i class="fas fa-heart"></i> {{ tech.upvotes }}</span>
+      <span class="">{{ tech.date_posted | date}}</span>
+      
+    </div>
+    <hr>
+     <div class="d-flex justify-content-center">
+      <!-- <span><i class="fas fa-heart"></i> {{ tech.upvotes }}</span> -->
+      <span><a href="{% url 'technology:detail' tech.id %}" class="card-link">Read More&raquo;</a></span>
+    </div>
+  </div>
+  <div class="overlay">
+      <div class="text">
+          {{ tech.short_description }}
+      </div>
+  </div>
+</div>

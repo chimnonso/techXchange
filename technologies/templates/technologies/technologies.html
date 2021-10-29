@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="container mt-5 pt-sm-5">
+    <div class="row text-center mb-5" id="tech">
+        <div class="col">
+            <h2 class="header-text">Technologies</h2>
+            <h3>Explore our awesome <span>technologies</span></h3>
+            <p>Trust us with your technological needs because, with us you can never go wrong</p>
+        </div>
+    </div>
+    <div class="row"><a href="" class="text-end pb-2">View More&raquo;</a></div>
+    <div class="row row-cols-1 row-cols-sm-3 row-cols-md-4 gx-0 gy-3">
+        
+        {% for tech in techs %}
+            <div class="col">
+                
+                
+                {% include 'partials/_technologies.html' %}
+            </div>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}
